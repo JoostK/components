@@ -35,7 +35,7 @@
     "main.ts"
   ],
   "angularCompilerOptions": {
-    "annotateForClosureCompiler": true,
-    "fullTemplateTypeCheck": true
+    "fullTemplateTypeCheck": true,
+    "enableIvy": true
   }
 }

@@ -44,5 +44,8 @@
     "./system-config.ts",
     "./main.ts",
     "**/*-module.ts"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "enableIvy": "ngtsc"
+  }
 }
