@@ -9,7 +9,8 @@ module.exports = config => {
     plugins: [
       require('karma-jasmine'), require('karma-browserstack-launcher'),
       require('karma-sauce-launcher'), require('karma-chrome-launcher'),
-      require('karma-firefox-launcher'), require('karma-sourcemap-loader'), {
+      require('karma-firefox-launcher'), require('karma-sourcemap-loader'),
+      require('karma-json-result-reporter'), {
         'middleware:fake-url': [
           'factory',
           function() {
@@ -71,8 +72,12 @@ module.exports = config => {
 
     preprocessors: {'dist/packages/**/*.js': ['sourcemap']},
 
-    reporters: ['dots'],
+    reporters: ['dots', 'json-result'],
     autoWatch: false,
+
+    jsonResultReporter: {
+      outputFile: "/tmp/karma-result.json",
+    },
 
     sauceLabs: {
       testName: 'Angular Material Unit Tests',
