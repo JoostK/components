@@ -32,7 +32,7 @@
     </div>
   </div>
   <label #label
-         [for]="inputId"
+         [attr.for]="inputId"
          (click)="$event.stopPropagation()">
     <ng-content></ng-content>
   </label>
